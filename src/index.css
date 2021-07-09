@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+	--normal-type: 168, 169, 120;
+	--fire-type: 240, 128, 47;
+	--water-type: 104, 143, 240;
+	--grass-type: 120, 200, 80;
+	--electric-type: 248, 208, 47;
+	--ice-type: 152, 216, 216;
+	--fighting-type: 192, 48, 40;
+	--poison-type: 160, 64, 161;
+	--ground-type: 224, 192, 104;
+	--flying-type: 168, 144, 240;
+	--psychic-type: 248, 88, 136;
+	--bug-type: 168, 184, 32;
+	--rock-type: 185, 160, 56;
+	--ghost-type: 112, 88, 153;
+	--dark-type: 112, 88, 72;
+	--dragon-type: 112, 56, 248;
+	--steel-type: 184, 184, 208;
+	--fairy-type: 240, 182, 188;
+}

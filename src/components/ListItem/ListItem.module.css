@@ -1,0 +1,138 @@
+.ListItem {
+	width: 100%;
+	display: flex;
+	border-radius: 16px;
+	box-shadow: 0px 3px 16px 0px rgba(94, 94, 94, 0.4);
+	min-height: 92px;
+	max-height: 92px;
+	background-color: #fff;
+	position: relative;
+	cursor: pointer;
+	transition: transform 0.05s linear;
+}
+
+.ListItem:hover {
+	transform: scale(1.02);
+}
+
+.ListItem:active {
+	transform: scale(0.98);
+}
+
+.ListItem__Sprite {
+	width: 92px;
+	height: 92px;
+	position: absolute;
+	right: 12px;
+	top: 0px;
+}
+
+.ListItem__Content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding: 12px 24px;
+	justify-content: space-between;
+}
+
+.Content__Title {
+	font-size: 1rem;
+	font-weight: 800;
+	margin: 0;
+	text-transform: capitalize;
+	color: white;
+}
+
+.PokemonType {
+	font-size: 0.75rem;
+	font-weight: 400;
+	margin: 0;
+	margin-bottom: 4px;
+}
+
+.Abilities {
+	font-size: 0.75rem;
+	font-weight: 300;
+	margin: 0;
+	font-style: italic;
+}
+
+.ListItem:not(:only-child) {
+	margin-bottom: 16px;
+}
+
+.Weight {
+	margin: 0;
+	margin-left: 6px;
+	font-size: 0.65rem;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.Chips {
+	display: flex;
+	align-items: center;
+}
+
+.AbilityChips {
+	margin-top: 2px;
+	display: flex;
+	align-items: center;
+}
+
+.ListItem--normal {
+	background: linear-gradient(45deg, rgba(var(--normal-type), 0.68) 60%, rgba(var(--normal-type), 0.4));
+}
+.ListItem--fire {
+	background: linear-gradient(45deg, rgba(var(--fire-type), 0.68) 60%, rgba(var(--fire-type), 0.4));
+}
+.ListItem--water {
+	background: linear-gradient(45deg, rgba(var(--water-type), 0.68) 60%, rgba(var(--water-type), 0.4));
+}
+.ListItem--grass {
+	background: linear-gradient(45deg, rgba(var(--grass-type), 0.68) 60%, rgba(var(--grass-type), 0.4));
+}
+.ListItem--electric {
+	background: linear-gradient(45deg, rgba(var(--electric-type), 0.68) 60%, rgba(var(--electric-type), 0.4));
+}
+.ListItem--ice {
+	background: linear-gradient(45deg, rgba(var(--ice-type), 0.68) 60%, rgba(var(--ice-type), 0.4));
+}
+.ListItem--fighting {
+	background: linear-gradient(45deg, rgba(var(--fighting-type), 0.68) 60%, rgba(var(--fighting-type), 0.4));
+}
+.ListItem--poison {
+	background: linear-gradient(45deg, rgba(var(--poison-type), 0.68) 60%, rgba(var(--poison-type), 0.4));
+}
+.ListItem--ground {
+	background: linear-gradient(45deg, rgba(var(--ground-type), 0.68) 60%, rgba(var(--ground-type), 0.4));
+}
+.ListItem--flying {
+	background: linear-gradient(45deg, rgba(var(--flying-type), 0.68) 60%, rgba(var(--flying-type), 0.4));
+}
+.ListItem--psychic {
+	background: linear-gradient(45deg, rgba(var(--psychic-type), 0.68) 60%, rgba(var(--psychic-type), 0.4));
+}
+.ListItem--bug {
+	background: linear-gradient(45deg, rgba(var(--bug-type), 0.68) 60%, rgba(var(--bug-type), 0.4));
+}
+.ListItem--rock {
+	background: linear-gradient(45deg, rgba(var(--rock-type), 0.68) 60%, rgba(var(--rock-type), 0.4));
+}
+.ListItem--ghost {
+	background: linear-gradient(45deg, rgba(var(--ghost-type), 0.68) 60%, rgba(var(--ghost-type), 0.4));
+}
+.ListItem--dark {
+	background: linear-gradient(45deg, rgba(var(--dark-type), 0.68) 60%, rgba(var(--dark-type), 0.4));
+}
+.ListItem--dragon {
+	background: linear-gradient(45deg, rgba(var(--dragon-type), 0.68) 60%, rgba(var(--dragon-type), 0.4));
+}
+.ListItem--steel {
+	background: linear-gradient(45deg, rgba(var(--steel-type), 0.8) 60%, rgba(var(--steel-type), 0.4));
+}
+.ListItem--fairy {
+	background: linear-gradient(45deg, rgba(var(--fairy-type), 0.8) 60%, rgba(var(--fairy-type), 0.4));
+}

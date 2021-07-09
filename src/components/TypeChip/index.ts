@@ -1,0 +1,1 @@
+export { TypeChip } from './TypeChip';

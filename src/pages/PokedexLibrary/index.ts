@@ -1,0 +1,1 @@
+export { PokedexLibrary } from './PokedexLibrary';

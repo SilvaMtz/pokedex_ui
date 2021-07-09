@@ -1,0 +1,49 @@
+.Tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+button.TabButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  color: #121212;
+  box-sizing: border-box;
+  margin-bottom: 6px;
+  cursor: pointer;
+  padding: 12px;
+}
+
+button.TabButton:active {
+  transform: scale(0.965);
+}
+
+button.TabButton:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.Tab--isActive button.TabButton {
+  background-color: rgb(var(--water-type));
+}
+
+.tabLabel {
+  margin: 0;
+  font-weight: 600;
+}
+.Tab--isActive .tabLabel {
+  color: white;
+}
+
+.tabLabelContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

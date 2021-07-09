@@ -1,0 +1,83 @@
+.TypeChip {
+  padding: 2px 8px;
+  height: 24px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: border 0.15s linear;
+  cursor: default;
+	text-transform: uppercase;
+	width: max-content;
+	color: white;
+}
+
+.TypeChip:first-child {
+  margin-left: 0px;
+}
+
+.TypeChip:last-child {
+  margin-right: 8px;
+}
+
+.TypeChip:not(:only-child) {
+	margin-right: 4px;
+}
+
+.TypeChip--normal {
+	background-color: rgb(var(--normal-type));
+}
+.TypeChip--fire {
+	background-color: rgb(var(--fire-type));
+}
+.TypeChip--water {
+	background-color: rgb(var(--water-type));
+}
+.TypeChip--grass {
+	background-color: rgb(var(--grass-type));
+}
+.TypeChip--electric {
+	background-color: rgb(var(--electric-type));
+}
+.TypeChip--ice {
+	background-color: rgb(var(--ice-type));
+}
+.TypeChip--fighting {
+	background-color: rgb(var(--fighting-type));
+}
+.TypeChip--poison {
+	background-color: rgb(var(--poison-type));
+}
+.TypeChip--ground {
+	background-color: rgb(var(--ground-type));
+}
+.TypeChip--flying {
+	background-color: rgb(var(--flying-type));
+}
+.TypeChip--psychic {
+	background-color: rgb(var(--psychic-type));
+}
+.TypeChip--bug {
+	background-color: rgb(var(--bug-type));
+}
+.TypeChip--rock {
+	background-color: rgb(var(--rock-type));
+}
+.TypeChip--ghost {
+	background-color: rgb(var(--ghost-type));
+}
+.TypeChip--dark {
+	background-color: rgb(var(--dark-type));
+}
+.TypeChip--dragon {
+	background-color: rgb(var(--dragon-type));
+}
+.TypeChip--steel {
+	background-color: rgb(var(--steel-type));
+}
+.TypeChip--fairy {
+	background-color: rgb(var(--fairy-type));
+}

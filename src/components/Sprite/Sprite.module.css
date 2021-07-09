@@ -1,0 +1,20 @@
+.Sprite {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Sprite--small {
+	height: 92px;
+	width: 92px;
+}
+
+.Sprite--medium {
+	height: 200px;
+	width: 200px;
+}
+
+.Sprite__Image {
+	width: 100%;
+	height: 100%;
+}
