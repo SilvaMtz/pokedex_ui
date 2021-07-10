@@ -1,17 +1,30 @@
 import { FunctionComponent, useEffect, useState } from 'react';
-import { createPortal } from 'react-dom';
 import classes from './PokemonDetail.module.css';
-import { Sprite, TypeChip, Stat, Tab, Tabs, TabPanel, Pokeball } from '../../components';
+import {
+  Sprite,
+  TypeChip,
+  Stat,
+  Tab,
+  Tabs,
+  TabPanel,
+  Pokeball
+} from '../../components';
 import { axiosDefault } from '../../axiosDefault';
 
-export const PokemonDetail: FunctionComponent<{
+interface PokemonDetailInterface {
   pokemonId: number;
   type: string;
   onClose: (() => void) | (() => {});
-}> = ({ pokemonId, onClose, type }) => {
+}
+
+export const PokemonDetail: FunctionComponent<PokemonDetailInterface> = ({
+  pokemonId,
+  type,
+  onClose
+}) => {
   const [pokemon, setPokemon] = useState({} as PokemonObject);
   const [loading, setLoading] = useState(false);
-	// eslint-disable-next-line
+  // eslint-disable-next-line
   const [error, setError] = useState({});
   const [activeTab, setActiveTab] = useState(0);
 
@@ -39,15 +52,12 @@ export const PokemonDetail: FunctionComponent<{
     return () => {
       setPokemon({} as PokemonObject);
     };
-		// eslint-disable-next-line
+    // eslint-disable-next-line
   }, []);
 
   const viewInstance = (
     <div className={classes['PokemonDetail']}>
-      <button
-        onClick={onClose}
-        className={classes['PokemonDetail__CloseButton']}
-      >
+      <button onClick={onClose} className={classes['PokemonDetail__CloseButton']}>
         <svg
           className="w-6 h-6"
           fill="white"
@@ -63,12 +73,17 @@ export const PokemonDetail: FunctionComponent<{
       </button>
       <div
         className={classes['SpriteContainer']}
-        style={{
-          backgroundColor: `rgba(var(--${type}-type))`
-        }}
+        style={{ backgroundColor: `rgba(var(--${type}-type))` }}
       >
-
-        {loading ? <Pokeball animate className={classes['Sprite']} /> : <Sprite className={classes['Sprite']} url={pokemon.photo} size="medium" />}
+        {loading ? (
+          <Pokeball animate className={classes['Sprite']} />
+        ) : (
+          <Sprite
+            className={classes['Sprite']}
+            url={pokemon.photo}
+            size="medium"
+          />
+        )}
       </div>
       <div className={classes['PokemonDescription']}>
         <div className={classes['PokemonDescription__Flap']} />
@@ -102,11 +117,11 @@ export const PokemonDetail: FunctionComponent<{
           <TabPanel activeTab={activeTab} tabId={1}>
             {pokemon?.abilities?.map((ab) => {
               return (
-								<div className={classes['AbilityBlock']} key={ab.id}>
-									<h5 className={classes['AbilityName']}>{ab.name}</h5>
-									<p className={classes['AbilityEffect']}>{ab.effect}</p>
-								</div>
-							);
+                <div className={classes['AbilityBlock']} key={ab.id}>
+                  <h5 className={classes['AbilityName']}>{ab.name}</h5>
+                  <p className={classes['AbilityEffect']}>{ab.effect}</p>
+                </div>
+              );
             })}
           </TabPanel>
         </div>
@@ -114,8 +129,5 @@ export const PokemonDetail: FunctionComponent<{
     </div>
   );
 
-  return createPortal(
-    viewInstance,
-    document.body.querySelector('#Pokedex') as Element
-  );
+  return viewInstance;
 };

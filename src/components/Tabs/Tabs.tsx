@@ -32,6 +32,7 @@ export const Tabs: FunctionComponent<
 			columns={2}
       direction="row"
       gutterSize="s"
+			responsive={false}
       className={className}
     >
       {tabsWithActiveTab}
