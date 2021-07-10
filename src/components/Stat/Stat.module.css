@@ -10,10 +10,19 @@
 
 .Stat__Name {
 	margin: 0;
-	text-transform: capitalize;
+	text-transform: uppercase;
 	font-weight: 600;
 	font-size: 1rem;
-	margin-right: 12px;
+	margin-bottom: 4px;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.StatNumber {
+	font-weight: 400;
+	font-size: 0.92rem;
+	font-style: italic;
 }
 
 .Stat {

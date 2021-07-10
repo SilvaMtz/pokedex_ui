@@ -21,7 +21,7 @@ export const Stat: FunctionComponent<StatInterface> = ({
 
   return (
 		<div className={classes['Stat__Wrapper']}>
-			<h6 className={classes['Stat__Name']}>{stat.stat.name}</h6>
+			<h6 className={classes['Stat__Name']}><span>{stat.stat.name}</span><span className={classes['StatNumber']}>{stat.base_stat}</span></h6>
 			<div className={classList}>
 				<div
 					className={classes['StatValue']}

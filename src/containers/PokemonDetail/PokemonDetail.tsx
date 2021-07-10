@@ -7,7 +7,10 @@ import {
   Tab,
   Tabs,
   TabPanel,
-  Pokeball
+  Pokeball,
+	FlexGrid,
+	FlexItem,
+	EvolutionBox
 } from '../../components';
 import { axiosDefault } from '../../axiosDefault';
 
@@ -95,7 +98,7 @@ export const PokemonDetail: FunctionComponent<PokemonDetailInterface> = ({
         </div>
         <br />
         <div className={classes['Stats']}>
-          <Tabs activeTab={activeTab}>
+          <Tabs columns={3} activeTab={activeTab}>
             <Tab
               tabId={0}
               label="Stats"
@@ -108,22 +111,41 @@ export const PokemonDetail: FunctionComponent<PokemonDetailInterface> = ({
               onClick={() => setActiveTab(1)}
               activeTab={activeTab}
             />
+            <Tab
+              tabId={2}
+              label="Evolutions"
+              onClick={() => setActiveTab(2)}
+              activeTab={activeTab}
+            />
           </Tabs>
-          <TabPanel activeTab={activeTab} tabId={0}>
-            {pokemon?.stats?.map((st, index) => {
-              return <Stat stat={st} key={index} />;
-            })}
-          </TabPanel>
-          <TabPanel activeTab={activeTab} tabId={1}>
-            {pokemon?.abilities?.map((ab) => {
-              return (
-                <div className={classes['AbilityBlock']} key={ab.id}>
-                  <h5 className={classes['AbilityName']}>{ab.name}</h5>
-                  <p className={classes['AbilityEffect']}>{ab.effect}</p>
-                </div>
-              );
-            })}
-          </TabPanel>
+					<div className={classes['DetailContent']}>
+						<TabPanel activeTab={activeTab} tabId={0}>
+							{pokemon?.stats?.map((st, index) => {
+								return <Stat stat={st} key={index} />;
+							})}
+						</TabPanel>
+						<TabPanel activeTab={activeTab} tabId={1}>
+							{pokemon?.abilities?.map((ab) => {
+								return (
+									<div className={classes['AbilityBlock']} key={ab.id}>
+										<h5 className={classes['AbilityName']}>{ab.name}</h5>
+										<p className={classes['AbilityEffect']}>{ab.effect}</p>
+									</div>
+								);
+							})}
+						</TabPanel>
+						<TabPanel activeTab={activeTab} tabId={2}>
+							<FlexGrid direction="row" columns={2} responsive={false}>
+								{pokemon?.evolutions?.map((ev, index) => {
+									return (
+										<FlexItem key={index}>
+											<EvolutionBox evolution={ev} />
+										</FlexItem>
+									);
+								})}
+							</FlexGrid>
+						</TabPanel>
+					</div>
         </div>
       </div>
     </div>

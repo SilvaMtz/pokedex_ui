@@ -5,5 +5,6 @@ export { Pokeball } from './Pokeball';
 export { ListItem } from './ListItem';
 export { Sprite } from './Sprite';
 export { TypeChip } from './TypeChip';
+export { EvolutionBox } from './EvolutionBox';
 export { Stat } from './Stat';
 export { Tab, TabPanel, Tabs } from './Tabs';

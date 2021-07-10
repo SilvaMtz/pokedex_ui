@@ -30,10 +30,17 @@ declare type PokemonStat = {
 };
 
 declare type PokemonAbilityDetail = {
-	id: number,
-	name: string,
-	effect: string
-}
+  id: number;
+  name: string;
+  effect: string;
+};
+
+declare type EvolutionObject = {
+  id: number;
+  pokemon_id: number;
+  name: string;
+  photo: string;
+};
 
 declare type PokemonObject = {
   id: number;
@@ -43,6 +50,7 @@ declare type PokemonObject = {
   photo: string;
   type: PokemonType[];
   stats: PokemonStat[];
+  evolutions: EvolutionObject[];
 };
 
 declare type PokemonType = {

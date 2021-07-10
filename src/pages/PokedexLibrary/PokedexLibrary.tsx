@@ -32,12 +32,13 @@ export const PokedexLibrary: FunctionComponent = () => {
 
   async function fetchNextPage() {
     setLoading(true);
+		console.log(nextPage)
     await axiosDefault
       .get('/pokemon_list', { params: { page: nextPage } })
       .then((response) => {
         const data = response.data;
         const newPokemon = data.result.list;
-        setNextPage(data.result.next);
+        setNextPage(data.result.next_page);
         const updatedPokemon = pokemonList.concat(newPokemon);
         setPokemonList([...updatedPokemon]);
         setLoading(false);
@@ -56,8 +57,8 @@ export const PokedexLibrary: FunctionComponent = () => {
         </div>
       ) : null}
       <div className={classes['PokemonList']}>
-        {pokemonList.map((pokemon) => {
-          return <ListItem key={pokemon.id} pokemon={pokemon} />;
+        {pokemonList.map((pokemon, index) => {
+          return <ListItem key={index} pokemon={pokemon} />;
         })}
         <button className={classes['LoadMore']} onClick={() => fetchNextPage()}>
           Load More
