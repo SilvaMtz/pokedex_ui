@@ -12,6 +12,7 @@
 	justify-content: center;
 	align-items: center;
 	position: absolute;
+	z-index: 999;
 	background-color: rgba(25, 28, 54, 0.6);
 }
 

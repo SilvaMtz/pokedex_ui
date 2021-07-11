@@ -7,4 +7,5 @@ export { Sprite } from './Sprite';
 export { TypeChip } from './TypeChip';
 export { EvolutionBox } from './EvolutionBox';
 export { Stat } from './Stat';
+export { OverlayMask } from './OverlayMask';
 export { Tab, TabPanel, Tabs } from './Tabs';

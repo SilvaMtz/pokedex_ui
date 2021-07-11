@@ -1,0 +1,46 @@
+.PokedexHome {
+	position: relative;
+	padding: 32px 24px;
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+}
+
+.PokedexTitle {
+	display: flex;
+	align-items: center;
+	padding: 12px;
+	box-sizing: border-box;
+	width: 100%;
+	border-radius: 16px;
+	background-color: rgba(54, 54, 54, 0.3);
+}
+
+.PokedexTitle h1 {
+	margin: 0;
+	font-size: 2rem;
+	font-weight: 900;
+}
+
+.ExploreLink {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px;
+	box-sizing: border-box;
+	background-color: rgb(55, 125, 255);
+	color: white;
+	text-decoration: none;
+	position: absolute;
+	top: 50%;
+	left: 35%;
+}
+
+.ExploreLink:hover {
+	background-color: rgb(93, 150, 255);
+}
+
+.ExploreLink:visited {
+	text-decoration: none;
+	color: white;
+}

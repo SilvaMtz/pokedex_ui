@@ -139,7 +139,7 @@ export const PokemonDetail: FunctionComponent<PokemonDetailInterface> = ({
 								{pokemon?.evolutions?.map((ev, index) => {
 									return (
 										<FlexItem key={index}>
-											<EvolutionBox evolution={ev} />
+											<EvolutionBox active={ev.name === pokemon.name} evolution={ev} />
 										</FlexItem>
 									);
 								})}
